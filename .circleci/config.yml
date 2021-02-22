@@ -10,8 +10,8 @@ workflows:
     jobs:
       - path-filtering/filter:
           mapping: |
-            dir_a/.* dir_a true
-            dir_b/.* dir_b true
+            A/.* dir_A true
+            B/.* dir_B true
           # Optional, defaults to main:
           # base-revision: origin/develop
 
