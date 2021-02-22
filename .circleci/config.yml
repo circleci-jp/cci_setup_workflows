@@ -11,7 +11,7 @@ jobs:
             echo `node -v` 
   node-12.20:
     docker:
-      - image: cimg/node:12.20
+      - image: cimg/node:15.0.1-browsers
     steps:
       - run:
           name: "NodeのVersionを表示"
@@ -22,4 +22,4 @@ workflows:
   build-test-deploy:
     jobs:
       - node-lts
-      - node-12.20
+      - node-15
