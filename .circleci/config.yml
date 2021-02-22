@@ -13,4 +13,4 @@ workflows:
             lts/.* lts true
             v15/.* v15 true
           # Optional, defaults to main:
-          base-revision: origin/develop
+          # base-revision: origin/develop
