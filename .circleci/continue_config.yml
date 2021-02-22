@@ -1,15 +1,15 @@
 version: 2.1
 
 parameters:
-  lts:
+  dir_a:
     type: boolean
     default: false
-  v15:
+  dir_b:
     type: boolean
     default: false
 
 jobs:
-  node-lts:
+  job-for-dir_a:
     docker:
       - image: cimg/node:lts
     steps:
@@ -17,7 +17,7 @@ jobs:
           name: "NodeのVersionを表示"
           command: |
             echo `node -v` 
-  node-v15:
+  job-for-dir_b:
     docker:
       - image: cimg/node:15.0.1-browsers
     steps:
@@ -28,10 +28,10 @@ jobs:
 
 workflows:
   build-lts:
-    when: << pipeline.parameters.lts >>
+    when: << pipeline.parameters.dir_a >>
     jobs:
-      - node-lts
+      - job-for-dir_a
   build-v15:
-    when: << pipeline.parameters.v15 >>
+    when: << pipeline.parameters.dir_a >>
     jobs:
-      - node-v15
+      - job-for-dir_b
