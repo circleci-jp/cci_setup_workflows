@@ -1,0 +1,16 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - run:
+          command: |
+            echo "Directry A"
+            echo "CIRCLE_BRANCH is '$CIRCLE_BRANCH'" 
+          
+workflows:
+  build-hold-deploy:
+    jobs:
+      - build
