@@ -10,7 +10,7 @@ workflows:
   use-my-orb:
     jobs:
       - continuation/continue:
-          configuration_path: ../A/.circleci/config.yml    
+          configuration_path: ../../A/.circleci/config.yml    
   # setup-workflow:
   #   jobs:
   #     - path-filtering/filter:
