@@ -17,7 +17,7 @@ jobs:
         command: pwd
     - continuation/continue:
         parameters: '{}'
-        configuration_path: .circleci/continue_config.yml  
+        configuration_path: A/.circleci/config.yml  
 
 workflows:
   use-my-orb:
