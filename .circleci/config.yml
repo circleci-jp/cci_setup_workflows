@@ -6,15 +6,6 @@ orbs:
   # path-filtering: circleci/path-filtering@dev:alpha
   continuation: circleci/continuation@0.1.2
 
-jobs:
-  pwd:
-    docker:
-        - image: cimg/node:lts
-    steps:
-      - run:
-          command: |
-            echo `pwd`
-
 workflows:
   use-my-orb:
     jobs:
