@@ -31,7 +31,6 @@ workflows:
     when: << pipeline.parameters.dir_A >>
     jobs:
       - job-for-dir_A
-      　　　　context: oidc-aws
   build-dir_B:
     when: << pipeline.parameters.dir_B >>
     jobs:
