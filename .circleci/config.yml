@@ -14,5 +14,4 @@ workflows:
             B/.* dir_B true
           # Optional, defaults to main:
           # base-revision: origin/develop
-         context: oidc-aws
 
