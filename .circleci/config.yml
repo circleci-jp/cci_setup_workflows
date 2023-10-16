@@ -12,5 +12,3 @@ workflows:
           mapping: |
             A/.* dir_A true
             B/.* dir_B true
-
-
